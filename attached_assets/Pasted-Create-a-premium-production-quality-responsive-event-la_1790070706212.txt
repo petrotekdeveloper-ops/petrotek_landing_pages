@@ -1,0 +1,804 @@
+Create a premium, production-quality, responsive event landing page for Petrotek General Trading LLC, UAE, created specifically around their participation in:
+
+AKCAF Ponnonakazhcha 2026
+
+Core campaign:
+“WHERE KERALA MEETS DUBAI, PROGRESS FINDS A HOME”
+
+This is a corporate event microsite that combines:
+- Petrotek UAE's industrial/corporate identity
+- Kerala's cultural identity
+- Dubai's modern visual identity
+- AKCAF Ponnonakazhcha 2026 event branding
+
+IMPORTANT:
+I have provided reference posters, the official event logo, the Petrotek logo, and a content document.
+
+Use the uploaded assets as the primary visual references.
+DO NOT redesign, redraw, distort, recolor, or replace the official logos.
+Use the supplied AKCAF Ponnonakazhcha 2026 logo prominently and accurately.
+Use the supplied Petrotek logo exactly as provided.
+
+The uploaded posters are VISUAL REFERENCES, not images that should simply be placed everywhere on the website.
+
+The website should feel like a premium corporate event campaign rather than a generic festival website.
+
+==================================================
+1. VISUAL DIRECTION
+==================================================
+
+Build the visual language from the supplied posters.
+
+Primary visual characteristics:
+
+- Premium
+- Elegant
+- Warm
+- Cultural
+- Corporate
+- Sophisticated
+- High-end editorial
+- Modern Dubai aesthetic
+- Kerala cultural details used tastefully
+- Strong red + gold identity
+- Warm ivory/cream backgrounds
+- Deep maroon accents
+- Subtle natural green from Kerala foliage
+
+Suggested palette extracted from the visual references:
+
+Primary Petrotek red:
+#C8102E
+
+Deep maroon:
+#6F1018
+
+Luxury gold:
+#D4A017
+
+Warm gold:
+#E8B84A
+
+Cream:
+#FFF8E8
+
+Warm ivory:
+#F7F0DF
+
+Dark text:
+#201A18
+
+Natural Kerala green:
+#526A3A
+
+Do not turn the entire website into a red/gold gradient.
+Use cream/ivory as the dominant canvas and strategically introduce red, maroon and gold.
+
+Gold should feel metallic/luxurious rather than yellow.
+
+==================================================
+2. OVERALL DESIGN PHILOSOPHY
+==================================================
+
+Think:
+
+“Luxury Kerala heritage meets modern Dubai corporate presentation.”
+
+The site should visually communicate:
+
+KERALA:
+- banana leaves
+- coconut palms
+- pookalam-inspired floral patterns
+- traditional brass nilavilakku
+- subtle Kerala architectural/cultural motifs
+- warm festive atmosphere
+
+DUBAI:
+- Dubai skyline
+- Burj Khalifa silhouette
+- modern architecture
+- warm sunset lighting
+- premium business environment
+
+PETROTEK:
+- reliability
+- engineering
+- machinery
+- industrial precision
+- technical expertise
+- trust
+- sustainability
+
+Do NOT overload the interface with cultural decorations.
+
+The cultural elements should appear as sophisticated visual accents rather than cartoonish festival graphics.
+
+==================================================
+3. HERO SECTION
+==================================================
+
+Create a visually striking full-width hero section.
+
+Use a premium cinematic composition inspired by the supplied posters:
+
+- warm Dubai sunset
+- subtle Dubai skyline
+- subtle Kerala palm silhouettes
+- soft cream/golden atmosphere
+- subtle water/reflection effect
+- restrained floral/leaf details
+- elegant gold decorative lines
+
+Hero content:
+
+PETROTEK LOGO
+
+AKCAF PONNONAKAZHCHA 2026 EVENT LOGO
+
+Eyebrow:
+“WHERE KERALA MEETS DUBAI”
+
+Main headline:
+“WHERE KERALA MEETS DUBAI,
+PROGRESS FINDS A HOME”
+
+Supporting text:
+
+“Meet Petrotek UAE at AKCAF Ponnonakazhcha 2026”
+
+Supporting paragraph:
+
+“From the values that unite a community to the reliability that keeps industries moving, progress is always built on trust.”
+
+Primary CTA:
+“Discover Petrotek UAE”
+
+Secondary CTA:
+“Explore Our Solutions”
+
+Event information should be immediately visible:
+
+04 OCTOBER 2026
+AMITY SCHOOL DUBAI
+
+11 OCTOBER 2026
+DUBAI WORLD TRADE CENTRE
+ZABEEL HALLS 5 & 6
+
+Create a premium date/location treatment inspired by the event poster.
+
+Use small line icons for:
+- calendar
+- location
+
+Do not use generic colorful festival icons.
+
+==================================================
+4. HERO INTERACTION
+==================================================
+
+Add subtle premium motion:
+
+- logo enters with a soft fade + scale
+- headline reveals smoothly
+- decorative gold line animates horizontally
+- background has extremely subtle parallax
+- Dubai skyline moves slightly slower than foreground
+- floating leaf/petal movement should be extremely subtle
+
+Avoid:
+- excessive particles
+- flashy animations
+- spinning logos
+- aggressive zoom effects
+- gimmicky festival animations
+
+The animation should feel like a luxury corporate campaign.
+
+==================================================
+5. BRAND STORY SECTION
+==================================================
+
+Create a section titled:
+
+“ROOTED IN TRUST. ENGINEERED FOR PROGRESS.”
+
+Use the following supplied copy:
+
+“Since 2009, Petrotek UAE has supported industries across the UAE with dependable products, technical knowledge and engineering solutions.
+
+Just as traditions are protected and passed from one generation to the next, industrial performance depends on protecting what matters—machines, productivity, energy and time.
+
+That is the responsibility behind every solution we provide.”
+
+Use a sophisticated split layout.
+
+Possible composition:
+
+LEFT:
+Large editorial typography:
+“ROOTED IN TRUST.”
+
+RIGHT:
+Body copy + subtle Petrotek engineering visual
+
+Use gold linework and very subtle technical/engineering graphics in the background.
+
+Do not make the section look like a standard corporate “About Us” block.
+
+==================================================
+6. “WHAT KEEPS INDUSTRY MOVING?” SECTION
+==================================================
+
+Headline:
+
+“WHAT KEEPS INDUSTRY MOVING?”
+
+Supporting copy:
+
+“Behind the food we enjoy, the buildings around us and the products we use, thousands of machines work quietly every day.”
+
+Then introduce three premium service cards.
+
+CARD 01
+
+Industrial Lubrication & Reliability
+
+“Engineered lubricants and reliability solutions that help reduce friction, control wear and extend equipment life.”
+
+CARD 02
+
+Compressed Air Solutions & Services
+
+“Compressed-air systems, dryers, filtration, nitrogen generation and technical services designed for efficient and dependable operation.”
+
+CARD 03
+
+CNC Technologies & Manufacturing Support
+
+“Precision tooling, workholding systems and manufacturing technologies that help industries produce with accuracy and confidence.”
+
+Each card should have:
+- refined line icon
+- number
+- title
+- description
+- subtle gold/red accent
+- hover animation
+
+Use industrial imagery or abstract technical visuals if needed.
+
+Do not use generic stock-office imagery.
+
+==================================================
+7. CULTURE × RELIABILITY SECTION
+==================================================
+
+Create a visually distinctive section connecting Kerala culture with Petrotek's reliability philosophy.
+
+Headline:
+
+“RELIABILITY IS SOMETHING WE ALL UNDERSTAND”
+
+Copy:
+
+“A celebration succeeds when every detail works together.
+Industry is no different.
+
+One overlooked component can interrupt an entire operation. The correct lubricant, clean compressed air or precise manufacturing tool can protect productivity long before a problem becomes visible.
+
+Petrotek UAE helps businesses listen to their machines, prevent avoidable downtime and build performance that lasts.”
+
+Visual concept:
+
+Create a sophisticated horizontal visual metaphor.
+
+For example:
+
+KERALA TRADITION
+→
+CRAFT & CARE
+→
+ENGINEERING PRECISION
+→
+INDUSTRIAL RELIABILITY
+→
+LASTING PROGRESS
+
+Use elegant gold connecting lines.
+
+Potential visual elements:
+- nilavilakku
+- engineering gear
+- precision tooling
+- Dubai skyline
+
+Keep this artistic and premium, not infographic-heavy.
+
+==================================================
+8. WHY PETROTEK UAE
+==================================================
+
+Headline:
+
+“WHY INDUSTRIES CHOOSE PETROTEK UAE”
+
+Present the following points:
+
+• Serving the UAE industrial market since 2009
+• Technical solutions supported by practical industry knowledge
+• Reliable products from trusted international manufacturers
+• Support across lubrication, compressed air and CNC technology
+• A long-term approach focused on performance and customer trust
+
+Use a premium numbered layout instead of ordinary bullet cards.
+
+Example:
+
+01
+UAE INDUSTRIAL EXPERIENCE
+
+02
+PRACTICAL TECHNICAL KNOWLEDGE
+
+03
+TRUSTED INTERNATIONAL MANUFACTURERS
+
+04
+MULTI-DISCIPLINE SUPPORT
+
+05
+LONG-TERM CUSTOMER FOCUS
+
+Add subtle scroll-based reveal animations.
+
+==================================================
+9. EVENT / CULTURAL CONNECTION
+==================================================
+
+Create a dedicated section for AKCAF Ponnonakazhcha.
+
+Headline:
+
+“CELEBRATING OUR ROOTS.
+SUPPORTING THE UAE’S FUTURE.”
+
+Copy:
+
+“AKCAF Ponnonakazhcha celebrates the culture, memories and relationships that continue to connect Malayalis across borders.
+
+Petrotek UAE is proud to share that spirit—carrying forward values of trust, responsibility and progress while contributing to the industries that build the UAE.”
+
+Use the supplied event logo prominently here.
+
+Create a rich visual environment inspired by the posters:
+
+- pookalam
+- Kerala leaves
+- warm red fabric
+- brass lamp
+- subtle Dubai skyline
+- gold decorative patterns
+
+Do not recreate the poster literally.
+Create a web-native composition.
+
+==================================================
+10. EVENT DATES SECTION
+==================================================
+
+Create a premium event schedule block.
+
+Heading:
+
+“COME FOR THE CULTURE.
+LEAVE WITH A MEMORY.”
+
+Two large event cards:
+
+04 OCT
+2026
+
+AMITY SCHOOL DUBAI
+
+and
+
+11 OCT
+2026
+
+DUBAI WORLD TRADE CENTRE
+ZA'ABEEL HALLS 5 & 6
+
+Use:
+- calendar icon
+- location icon
+- gold separators
+- large typography
+
+Make the dates visually prominent.
+
+==================================================
+11. FINAL CTA
+==================================================
+
+Create a high-impact closing section.
+
+Headline:
+
+“LET’S BUILD RELIABLE PROGRESS TOGETHER”
+
+Copy:
+
+“Looking for dependable industrial supplies, technical guidance or engineering solutions?
+
+Our team would be pleased to understand your requirements and explore how Petrotek UAE can support your operations.”
+
+Buttons:
+
+“Speak With Our Team”
+
+“Explore Our Solutions”
+
+Use a warm premium Dubai sunset / Kerala-inspired background.
+
+CTA section should feel like the conclusion of a brand story.
+
+==================================================
+12. FOOTER
+==================================================
+
+Use a clean premium footer.
+
+Petrotek General Trading LLC
+
+Dubai, United Arab Emirates
+
+Telephone:
++971 4 289 6166
+
+Email:
+lubeinfo@petrotek.de
+
+Website:
+www.petrotek.de
+
+Include:
+- Petrotek logo
+- AKCAF event logo
+- social/contact icons if appropriate
+- subtle gold divider
+- “Reliability-Led Sustainability.”
+
+Do not overcrowd the footer.
+
+==================================================
+13. NAVIGATION
+==================================================
+
+Create a sticky premium navigation bar.
+
+Desktop:
+
+PETROTEK LOGO
+|
+About
+Solutions
+Why Petrotek
+The Event
+Contact
+
+Right side:
+“Speak With Our Team”
+
+The navigation should initially be transparent over the hero and transform into a solid/blurred cream or white navigation bar when scrolling.
+
+Mobile:
+- compact Petrotek logo
+- hamburger menu
+- clean slide/fade navigation drawer
+
+Do not use a generic SaaS navbar.
+
+==================================================
+14. TYPOGRAPHY
+==================================================
+
+Use a premium typography pairing.
+
+Headings:
+Elegant high-contrast serif or sophisticated display font.
+
+Body:
+Modern clean sans-serif.
+
+The typography should resemble the editorial/luxury feel of the supplied posters.
+
+Important:
+
+The large headlines should feel premium and spacious.
+
+Use uppercase sparingly for:
+- section labels
+- event dates
+- short supporting headings
+
+Avoid excessive bold text everywhere.
+
+Typography hierarchy must be extremely clear.
+
+==================================================
+15. DECORATIVE LANGUAGE
+==================================================
+
+Use a consistent decorative system based on the posters:
+
+- thin gold horizontal rules
+- small ornamental gold motifs
+- subtle floral geometry
+- Kerala leaf silhouettes
+- pookalam-inspired circular patterns
+- fine technical engineering line drawings
+- subtle circular geometry
+- gold dividers
+
+Do not mix unrelated decorative styles.
+
+Everything should feel like one designed identity.
+
+==================================================
+16. IMAGERY
+==================================================
+
+Prioritize the supplied event poster/logo assets.
+
+If additional visuals are required, use imagery that combines:
+
+Kerala:
+- coconut palms
+- traditional lamps
+- pookalam
+- Kerala water scenery
+- subtle cultural architecture
+
+Dubai:
+- skyline
+- Burj Khalifa
+- modern architecture
+- sunset cityscape
+
+Industry:
+- precision machinery
+- CNC machining
+- industrial lubrication
+- compressed air systems
+- engineering details
+
+Avoid generic corporate stock photography of:
+- people shaking hands
+- businessmen in suits
+- office meetings
+- generic skyscraper offices
+
+Images should feel editorial and cinematic.
+
+==================================================
+17. RESPONSIVE DESIGN
+==================================================
+
+The website must be fully responsive.
+
+Desktop:
+1440px+
+Premium spacious composition.
+
+Laptop:
+1024–1439px
+Maintain hierarchy without excessive whitespace.
+
+Tablet:
+768–1023px
+Reflow sections cleanly.
+
+Mobile:
+320–767px
+
+On mobile:
+- hero becomes vertically stacked
+- event logo remains prominent
+- event dates become stacked cards
+- service cards become single-column
+- decorative elements are reduced
+- typography scales intelligently
+- no horizontal overflow
+- CTA buttons become full-width where appropriate
+
+The mobile experience must feel intentionally designed, not simply a desktop layout compressed.
+
+==================================================
+18. MICRO-INTERACTIONS
+==================================================
+
+Use subtle, performance-conscious animations.
+
+Recommended:
+- fade-up reveals
+- staggered text reveals
+- image parallax
+- hover elevation
+- gold underline animation
+- card border glow on hover
+- smooth anchor scrolling
+- navbar transition
+- subtle logo entrance
+
+Animation duration:
+approximately 400–900ms depending on interaction.
+
+Use easing curves that feel premium and natural.
+
+Respect prefers-reduced-motion.
+
+==================================================
+19. TECHNICAL IMPLEMENTATION
+==================================================
+
+Build the page using:
+
+React
+Vite
+Tailwind CSS
+
+Use Framer Motion only where it adds meaningful value.
+
+Use semantic HTML.
+
+Componentize the page into reusable components:
+
+Navbar
+Hero
+EventDates
+BrandStory
+Solutions
+ReliabilityStory
+WhyPetrotek
+EventCulture
+FinalCTA
+Footer
+
+Keep the code clean and production-ready.
+
+Use reusable data arrays for:
+- event dates
+- solutions
+- reasons/benefits
+
+Do not duplicate markup unnecessarily.
+
+==================================================
+20. PERFORMANCE
+==================================================
+
+The site must be fast.
+
+Requirements:
+
+- optimize image loading
+- lazy-load below-the-fold images
+- use modern image formats where possible
+- avoid unnecessarily large background images
+- minimize animation overhead
+- avoid excessive JavaScript
+- avoid unnecessary dependencies
+- maintain excellent Lighthouse performance
+- semantic HTML
+- proper heading hierarchy
+- accessible buttons
+- keyboard navigation
+- visible focus states
+- alt text for meaningful images
+
+==================================================
+21. SEO
+==================================================
+
+Use:
+
+SEO Title:
+
+“Petrotek UAE at AKCAF Ponnonakazhcha 2026 | Industrial Reliability Solutions”
+
+Meta Description:
+
+“Meet Petrotek UAE at AKCAF Ponnonakazhcha 2026 in Dubai. Discover reliable solutions for industrial lubrication, compressed air and CNC manufacturing technology.”
+
+Use appropriate:
+- Open Graph metadata
+- Twitter/X metadata
+- canonical URL
+- favicon
+- descriptive image alt text
+- semantic headings
+
+==================================================
+22. IMPORTANT BRAND RULES
+==================================================
+
+DO NOT:
+
+- redesign the Petrotek logo
+- alter the AKCAF event logo
+- stretch logos
+- add random gradients
+- use neon colors
+- use generic SaaS UI
+- use glassmorphism everywhere
+- make it look like an e-commerce website
+- make it look like a generic Kerala festival template
+- overcrowd the page with flowers
+- use cartoonish Kerala graphics
+- use excessive animations
+- invent event information
+- invent Petrotek statistics
+- invent sponsors
+- invent speakers
+- invent ticket information
+- invent event timings
+
+If information is not supplied, leave it out.
+
+==================================================
+23. CONTENT SOURCE PRIORITY
+==================================================
+
+Use the supplied “WHERE KERALA MEETS DUBAI” document as the authoritative source for website copy.
+
+Use the supplied posters primarily for:
+- visual style
+- color palette
+- composition inspiration
+- event branding
+- logo treatment
+
+Do not silently change factual information.
+
+Where the poster and document conflict, do not invent a resolution.
+
+==================================================
+24. OVERALL EXPERIENCE
+==================================================
+
+The finished page should feel like:
+
+A premium Dubai corporate campaign
++
+Kerala cultural heritage
++
+Luxury event branding
++
+Industrial engineering credibility.
+
+The visitor should immediately understand:
+
+1. Petrotek is participating in AKCAF Ponnonakazhcha 2026.
+2. The event connects Kerala and Dubai.
+3. Petrotek is an established UAE industrial solutions company.
+4. Petrotek specializes in lubrication/reliability, compressed air and CNC technologies.
+5. Visitors can connect with the Petrotek team.
+
+The page should tell a visual story:
+
+KERALA ROOTS
+↓
+DUBAI COMMUNITY
+↓
+PETROTEK TRUST
+↓
+ENGINEERING EXPERTISE
+↓
+RELIABLE PROGRESS
+
+Make the final result visually exceptional, highly polished, responsive, fast, accessible and production-ready.
+
+Do not make it look like an AI-generated template.
+It should look like a professionally art-directed corporate event microsite created by a premium digital agency.

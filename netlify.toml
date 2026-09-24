@@ -1,0 +1,3 @@
+[build]
+command = "pnpm --filter @workspace/petrotek-akcaf-2026 run build"
+publish = "artifacts/petrotek-akcaf-2026/dist/public"
