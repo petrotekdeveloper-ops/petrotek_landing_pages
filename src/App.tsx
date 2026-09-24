@@ -149,7 +149,7 @@ function Hero() {
       <img className="hero-art" src={heroBackground} alt="" aria-hidden="true" fetchPriority="high" />
       <div className="container">
         <div className="hero-grid">
-          <div>
+          <div className="hero-copy">
             <Reveal delay={100}>
               <h1 id="hero-title">WHERE KERALA MEETS DUBAI, <em>PROGRESS FINDS A HOME.</em></h1>
             </Reveal>
@@ -166,15 +166,15 @@ function Hero() {
             <div className="hero-logo-wrap">
               <img className="event-logo" src={eventLogo} alt="Official AKCAF Ponnonakazhcha 2026 event logo" />
             </div>
-            <div className="hero-foot" aria-label="Event dates">
-              <div className="hero-event">
-                <CalendarDays size={19} />
-                <div><strong>04 OCTOBER 2026</strong><span>Amity School Dubai</span></div>
-              </div>
-              <div className="hero-event">
-                <MapPin size={19} />
-                <div><strong>11 OCTOBER 2026</strong><span>Dubai World Trade Centre<br />Zabeel Halls 5 &amp; 6</span></div>
-              </div>
+          </Reveal>
+          <Reveal className="hero-foot" delay={360}>
+            <div className="hero-event">
+              <CalendarDays size={19} />
+              <div><strong>04 OCTOBER 2026</strong><span>Amity School Dubai</span></div>
+            </div>
+            <div className="hero-event">
+              <MapPin size={19} />
+              <div><strong>11 OCTOBER 2026</strong><span>Dubai World Trade Centre<br />Zabeel Halls 5 &amp; 6</span></div>
             </div>
           </Reveal>
         </div>

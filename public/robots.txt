@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://zippy-fudge-da77f8.netlify.app/sitemap.xml
