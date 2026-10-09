@@ -46,7 +46,7 @@ button:focus-visible, a:focus-visible {
 }
 img { max-width: 100%; display: block; }
 
-.site-shell { overflow: hidden; }
+.site-shell { overflow: hidden; overflow: clip; }
 .container { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
 .eyebrow {
   display: flex; align-items: center; gap: 12px;
@@ -241,12 +241,14 @@ img { max-width: 100%; display: block; }
 .career-detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(330px, 420px); gap: clamp(42px, 6vw, 78px); align-items: start; }
 .career-back { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 34px; color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .career-detail h1 { max-width: 780px; margin: 18px 0 18px; color: var(--maroon); font-family: var(--display); font-size: clamp(46px, 6vw, 82px); line-height: .96; font-weight: 500; letter-spacing: -.04em; }
-.career-summary { max-width: 720px; margin: 0 0 36px; color: var(--ink-soft); font-size: 17px; line-height: 1.75; }
 .job-section { padding: 30px 0; border-top: 1px solid var(--line); }
 .job-section h2 { margin: 0 0 16px; color: var(--maroon); font-size: 13px; letter-spacing: .16em; text-transform: uppercase; }
-.job-section ul { margin: 0; padding-left: 20px; color: var(--ink-soft); line-height: 1.72; }
-.job-section li + li { margin-top: 9px; }
+.job-section ul { margin: 0; padding: 0; list-style: none; color: var(--ink-soft); font-size: 16px; line-height: 1.65; }
+.job-section li { position: relative; padding-left: 24px; }
+.job-section li::before { content: ''; position: absolute; left: 2px; top: .62em; width: 7px; height: 7px; border-radius: 50%; background: var(--red); }
+.job-section li + li { margin-top: 10px; }
 .application-panel { position: sticky; top: 112px; }
+@media (max-height: 760px) { .application-panel { position: static; } }
 .application-card { padding: 28px; background: var(--cream); border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(61,14,19,.08); }
 .application-card > svg { color: var(--red); }
 .application-card h2 { margin: 14px 0 10px; color: var(--maroon); font-family: var(--display); font-size: 32px; font-weight: 500; }

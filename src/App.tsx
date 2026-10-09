@@ -522,7 +522,12 @@ function CareerDetail({ job }: { job: JobOpening }) {
               </a> */}
               <div className="eyebrow">{job.division}</div>
               <h1 id="career-detail-title">{job.title}</h1>
-              <p className="career-summary">{job.summary}</p>
+              <section className="job-section">
+                <h2>Role Overview</h2>
+                <ul>
+                  {job.summary.split(/(?<=\.)\s+/).map((point) => <li key={point}>{point}</li>)}
+                </ul>
+              </section>
               {job.sections.map((section) => (
                 <section className="job-section" key={section.title}>
                   <h2>{section.title}</h2>
