@@ -223,6 +223,46 @@ img { max-width: 100%; display: block; }
 .date-card h3 span { display: block; color: var(--gold-light); font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: .2em; margin-top: 12px; }
 .date-card p { margin: 20px 0 0; color: rgba(255,248,232,.75); font-size: 13px; line-height: 1.55; text-transform: uppercase; letter-spacing: .08em; max-width: 250px; }
 
+.careers { background: var(--cream); padding: clamp(76px, 10vh, 112px) 0; }
+.careers-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 420px); align-items: end; gap: clamp(26px, 5vw, 58px); margin-bottom: clamp(34px, 5vh, 48px); }
+.careers .section-title { max-width: 620px; font-size: clamp(40px, 5.4vw, 70px); }
+.careers-head .section-copy { margin: 0; max-width: 420px; }
+.career-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.career-card { min-height: 310px; display: flex; flex-direction: column; padding: 24px; border: 1px solid var(--line); background: rgba(251,246,235,.72); transition: transform .28s ease, border-color .28s ease, background-color .28s ease; }
+.career-card:hover { transform: translateY(-5px); border-color: rgba(200,16,46,.32); background: var(--paper); }
+.career-card-top { display: flex; justify-content: space-between; gap: 16px; color: var(--red); }
+.career-card-top span { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.career-card h3 { margin: 34px 0 12px; color: var(--maroon); font-family: var(--display); font-size: 28px; line-height: 1.05; font-weight: 500; }
+.career-card p { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.6; }
+.career-card strong { margin-top: auto; padding-top: 22px; color: var(--red); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; }
+
+.career-detail { padding: 138px 0 96px; background: var(--paper); min-height: 100svh; }
+.career-detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(330px, 420px); gap: clamp(42px, 6vw, 78px); align-items: start; }
+.career-back { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 34px; color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.career-detail h1 { max-width: 780px; margin: 18px 0 18px; color: var(--maroon); font-family: var(--display); font-size: clamp(46px, 6vw, 82px); line-height: .96; font-weight: 500; letter-spacing: -.04em; }
+.career-summary { max-width: 720px; margin: 0 0 36px; color: var(--ink-soft); font-size: 17px; line-height: 1.75; }
+.job-section { padding: 30px 0; border-top: 1px solid var(--line); }
+.job-section h2 { margin: 0 0 16px; color: var(--maroon); font-size: 13px; letter-spacing: .16em; text-transform: uppercase; }
+.job-section ul { margin: 0; padding-left: 20px; color: var(--ink-soft); line-height: 1.72; }
+.job-section li + li { margin-top: 9px; }
+.application-panel { position: sticky; top: 112px; }
+.application-card { padding: 28px; background: var(--cream); border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(61,14,19,.08); }
+.application-card > svg { color: var(--red); }
+.application-card h2 { margin: 14px 0 10px; color: var(--maroon); font-family: var(--display); font-size: 32px; font-weight: 500; }
+.application-card p { margin: 0 0 22px; color: var(--ink-soft); line-height: 1.6; font-size: 14px; }
+.career-form { display: grid; gap: 15px; }
+.career-form label { display: grid; gap: 8px; color: var(--maroon); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.career-form input { width: 100%; border: 1px solid rgba(111,16,24,.2); background: var(--paper); color: var(--ink); padding: 13px 14px; font: inherit; }
+.career-form input:focus { outline: 2px solid rgba(200,16,46,.22); border-color: var(--red); }
+.career-form input[type='file'] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.resume-label { position: relative; }
+.resume-input { display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 14px; border: 1px solid rgba(111,16,24,.2); background: var(--paper); color: var(--ink-soft); font-size: 12px; font-weight: 600; letter-spacing: normal; text-transform: none; }
+.career-form .button-primary { width: 100%; margin-top: 4px; cursor: pointer; }
+.career-form .button-primary:disabled { opacity: .65; cursor: wait; }
+.career-apply-note { margin: 12px 0 0; color: var(--maroon); font-size: 15px; line-height: 1.7; }
+.application-success { display: grid; gap: 16px; }
+.hidden-field { display: none; }
+
 .cta { padding: 144px 0; position: relative; color: var(--cream); background-position: center; background-size: cover; }
 .cta::before { content: ''; position: absolute; width: 370px; height: 370px; border: 1px solid rgba(232,184,74,.34); border-radius: 50%; right: 12%; top: 50%; transform: translateY(-50%); box-shadow: 0 0 0 20px rgba(232,184,74,.04), 0 0 0 42px rgba(232,184,74,.025); }
 .cta-inner { position: relative; max-width: 790px; }
@@ -274,6 +314,10 @@ img { max-width: 100%; display: block; }
   .culture-art { min-height: 400px; }
   .solutions-head { grid-template-columns: 1fr; align-items: start; }
   .solutions-head .section-copy { max-width: 560px; }
+  .careers-head { grid-template-columns: 1fr; align-items: start; }
+  .career-grid { grid-template-columns: repeat(2, 1fr); }
+  .career-detail-grid { grid-template-columns: 1fr; }
+  .application-panel { position: static; }
   .dates-head { grid-template-columns: 1fr; align-items: start; }
   .date-note { max-width: 420px; }
   .footer-main { grid-template-columns: 1fr 1fr; }
@@ -302,6 +346,13 @@ img { max-width: 100%; display: block; }
   .section-title { font-size: clamp(42px, 13vw, 62px); }
   .solutions { padding: 74px 0; }
   .solutions .section-title { font-size: clamp(38px, 12vw, 56px); }
+  .careers { padding: 74px 0; }
+  .careers .section-title { font-size: clamp(38px, 12vw, 56px); }
+  .career-grid { grid-template-columns: 1fr; }
+  .career-card { min-height: auto; padding: 22px; }
+  .career-card h3 { margin-top: 28px; font-size: 25px; }
+  .career-detail { padding: 104px 0 74px; }
+  .career-detail h1 { font-size: clamp(40px, 12vw, 60px); }
   .solutions-head .section-copy, .date-note { margin-top: 20px; }
   .solution-card { grid-template-columns: 36px 48px 1fr; gap: 12px; align-items: start; padding: 22px 0; }
   .solution-no { font-size: 17px; }

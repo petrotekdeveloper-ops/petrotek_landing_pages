@@ -1,15 +1,18 @@
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useState, type FormEvent, type MouseEvent, type ReactNode } from 'react';
 import {
   ArrowDownRight,
   ArrowUpRight,
+  BriefcaseBusiness,
   CalendarDays,
   ChevronRight,
+  FileText,
   Gauge,
   Mail,
   MapPin,
   Menu,
   Phone,
   ShieldCheck,
+  Upload,
   Wind,
   Wrench,
   X,
@@ -18,6 +21,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
+import { useToast } from '@/hooks/use-toast';
+import { jobOpenings, getJobBySlug, type JobOpening } from '@/data/jobs';
+import NotFound from '@/pages/not-found';
 
 import eventLogo from '@assets/ChatGPT_Image_Sep_22,_2026,_01_46_53_PM_1790070640182.png';
 import campaignPoster from '@assets/image_1790070671603.png';
@@ -26,13 +32,27 @@ import heroBackground from '@assets/hero_section_bg.png';
 
 const queryClient = new QueryClient();
 const contactEmail = 'lubeinfo@petrotek.de';
+const hrEmail = 'hr@petrotek.de';
 const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(contactEmail)}&su=${encodeURIComponent('Petrotek UAE enquiry')}`;
+const MAX_RESUME_BYTES = 8 * 1024 * 1024;
+
+function navigateTo(href: string) {
+  window.history.pushState({}, '', href);
+  window.dispatchEvent(new PopStateEvent('popstate'));
+  if (href.includes('#')) {
+    const id = href.slice(href.indexOf('#'));
+    window.setTimeout(() => document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' }), 40);
+  } else {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+}
 
 const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Solutions', href: '#solutions' },
   { label: 'Why Petrotek', href: '#why' },
   { label: 'The Event', href: '#event' },
+  { label: 'Careers', href: '#careers' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -91,26 +111,47 @@ function Reveal({ children, className = '', delay = 0 }: { children: ReactNode; 
   );
 }
 
-function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+function Navbar({ forceScrolled = false }: { forceScrolled?: boolean }) {
+  const [scrolled, setScrolled] = useState(forceScrolled);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(forceScrolled || window.scrollY > 24);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [forceScrolled]);
+
+  const linkHref = (href: string) => (forceScrolled && href.startsWith('#') ? `/${href}` : href);
+  const goHomeSection = (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+    if (!href.startsWith('#')) return;
+    event.preventDefault();
+    setOpen(false);
+    navigateTo(forceScrolled ? `/${href}` : href);
+  };
 
   return (
     <header className={`site-nav ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="container nav-inner">
-        <a href="#top" aria-label="Petrotek UAE home" data-testid="link-home">
+        <a
+          href={forceScrolled ? '/' : '#top'}
+          aria-label="Petrotek UAE home"
+          data-testid="link-home"
+          onClick={(event) => {
+            event.preventDefault();
+            navigateTo(forceScrolled ? '/' : '#top');
+          }}
+        >
           <PetrotekMark />
         </a>
         <nav className="nav-links" aria-label="Primary navigation">
           {navItems.map((item) => (
-            <a href={item.href} key={item.href} data-testid={`link-nav-${item.label.toLowerCase().replaceAll(' ', '-')}`}>
+            <a
+              href={linkHref(item.href)}
+              key={item.href}
+              data-testid={`link-nav-${item.label.toLowerCase().replaceAll(' ', '-')}`}
+              onClick={goHomeSection(item.href)}
+            >
               {item.label}
             </a>
           ))}
@@ -131,7 +172,12 @@ function Navbar() {
       </div>
       <nav className={`mobile-menu ${open ? 'is-open' : ''}`} aria-label="Mobile navigation">
         {navItems.map((item) => (
-          <a href={item.href} key={item.href} onClick={() => setOpen(false)} data-testid={`link-mobile-${item.label.toLowerCase().replaceAll(' ', '-')}`}>
+          <a
+            href={linkHref(item.href)}
+            key={item.href}
+            onClick={goHomeSection(item.href)}
+            data-testid={`link-mobile-${item.label.toLowerCase().replaceAll(' ', '-')}`}
+          >
             {item.label} <ChevronRight size={15} />
           </a>
         ))}
@@ -337,6 +383,226 @@ function EventDates() {
   );
 }
 
+function Careers() {
+  return (
+    <section className="section careers" id="careers" aria-labelledby="careers-title">
+      <div className="container">
+        <Reveal className="careers-head">
+          <div>
+            <div className="eyebrow">Current openings</div>
+            <h2 className="section-title" id="careers-title">Build your career <em>with Petrotek.</em></h2>
+          </div>
+          <p className="section-copy">Explore open roles across customer support, compressed air service, CNC service and sales.</p>
+        </Reveal>
+        <div className="career-grid">
+          {jobOpenings.map((job, index) => (
+            <Reveal key={job.slug} delay={index * 80}>
+              <a
+                className="career-card"
+                href={`/careers/${job.slug}`}
+                data-testid={`link-career-${job.slug}`}
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigateTo(`/careers/${job.slug}`);
+                }}
+              >
+                <div className="career-card-top">
+                  <span><BriefcaseBusiness size={17} /> {job.division}</span>
+                  <ArrowUpRight size={17} />
+                </div>
+                <h3>{job.title}</h3>
+                <p>{job.summary}</p>
+                <strong>View details</strong>
+              </a>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CareerDetail({ job }: { job: JobOpening }) {
+  const { toast } = useToast();
+  const [resumeName, setResumeName] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    document.title = `${job.title} | Careers at Petrotek UAE`;
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [job.title]);
+
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const resume = formData.get('resume');
+
+    if (!(resume instanceof File) || resume.size === 0) {
+      toast({ title: 'Resume required', description: 'Please attach your CV before submitting.', variant: 'destructive' });
+      return;
+    }
+    if (resume.size > MAX_RESUME_BYTES) {
+      toast({ title: 'File too large', description: 'Please attach a resume under 8MB.', variant: 'destructive' });
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const netlifyResponse = await fetch('/', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const mailData = new FormData();
+      mailData.append('name', String(formData.get('name') ?? ''));
+      mailData.append('email', String(formData.get('email') ?? ''));
+      mailData.append('phone', String(formData.get('phone') ?? ''));
+      mailData.append('position', job.title);
+      mailData.append('resume', resume, resume.name);
+      mailData.append('_subject', `Career application: ${job.title}`);
+      mailData.append('_template', 'table');
+      mailData.append('_captcha', 'false');
+      mailData.append(
+        'message',
+        [
+          `New application for ${job.title}`,
+          `Name: ${formData.get('name')}`,
+          `Email: ${formData.get('email')}`,
+          `Phone: ${formData.get('phone')}`,
+          `Resume file: ${resume.name}`,
+        ].join('\n'),
+      );
+
+      const mailResponse = await fetch(`https://formsubmit.co/ajax/${hrEmail}`, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: mailData,
+      });
+
+      if (!netlifyResponse.ok && !mailResponse.ok) {
+        throw new Error('Application could not be sent');
+      }
+
+      setSubmitted(true);
+      form.reset();
+      setResumeName('');
+      toast({
+        title: 'Application sent',
+        description: `Your details were submitted to ${hrEmail}.`,
+      });
+    } catch {
+      toast({
+        title: 'Could not send application',
+        description: `Please email your CV directly to ${hrEmail}.`,
+        variant: 'destructive',
+      });
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="site-shell">
+      <Navbar forceScrolled />
+      <main>
+        <section className="career-detail" aria-labelledby="career-detail-title">
+          <div className="container career-detail-grid">
+            <article className="career-detail-copy">
+              <a
+                className="career-back"
+                href="/#careers"
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigateTo('/#careers');
+                }}
+              >
+                <ArrowDownRight size={15} /> Back to openings
+              </a>
+              <div className="eyebrow">{job.division}</div>
+              <h1 id="career-detail-title">{job.title}</h1>
+              <p className="career-summary">{job.summary}</p>
+              {job.sections.map((section) => (
+                <section className="job-section" key={section.title}>
+                  <h2>{section.title}</h2>
+                  <ul>
+                    {section.items.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+                </section>
+              ))}
+              {job.applyNote ? <p className="career-apply-note">{job.applyNote}</p> : null}
+            </article>
+
+            <aside className="application-panel" aria-labelledby="application-title">
+              <div className="application-card">
+                <FileText size={22} />
+                <h2 id="application-title">Apply for this role</h2>
+                <p>Submit your name, email, phone number and resume. Applications are sent to <strong>{hrEmail}</strong>.</p>
+                {submitted ? (
+                  <div className="application-success" role="status">
+                    <p>Thank you. Your application has been submitted. Our HR team will review it at {hrEmail}.</p>
+                    <button className="button-secondary" type="button" onClick={() => setSubmitted(false)}>
+                      Submit another application
+                    </button>
+                  </div>
+                ) : (
+                  <form
+                    className="career-form"
+                    name="career-application"
+                    method="POST"
+                    action="/"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    encType="multipart/form-data"
+                    onSubmit={onSubmit}
+                  >
+                    <input type="hidden" name="form-name" value="career-application" />
+                    <input type="hidden" name="position" value={job.title} />
+                    <p className="hidden-field">
+                      <label>Do not fill this out: <input name="bot-field" /></label>
+                    </p>
+                    <label>
+                      Full name
+                      <input name="name" type="text" required autoComplete="name" />
+                    </label>
+                    <label>
+                      Email address
+                      <input name="email" type="email" required autoComplete="email" />
+                    </label>
+                    <label>
+                      Phone number
+                      <input name="phone" type="tel" required autoComplete="tel" />
+                    </label>
+                    <label className="resume-label">
+                      Resume
+                      <span className="resume-input">
+                        <Upload size={16} />
+                        {resumeName || 'Attach PDF, DOC or DOCX'}
+                      </span>
+                      <input
+                        name="resume"
+                        type="file"
+                        accept=".pdf,.doc,.docx,application/pdf"
+                        required
+                        onChange={(event) => setResumeName(event.target.files?.[0]?.name ?? '')}
+                      />
+                    </label>
+                    <button className="button-primary" type="submit" disabled={submitting}>
+                      {submitting ? 'Sending…' : 'Submit application'} <Mail size={16} />
+                    </button>
+                  </form>
+                )}
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
 function FinalCta() {
   return (
     <section
@@ -372,7 +638,20 @@ function Footer() {
           <div>
             <h3>Explore</h3>
             <nav className="footer-links" aria-label="Footer navigation">
-              {navItems.map((item) => <a href={item.href} key={item.href} data-testid={`link-footer-${item.label.toLowerCase().replaceAll(' ', '-')}`}>{item.label}</a>)}
+              {navItems.map((item) => (
+                <a
+                  href={item.href.startsWith('#') ? `/${item.href}` : item.href}
+                  key={item.href}
+                  data-testid={`link-footer-${item.label.toLowerCase().replaceAll(' ', '-')}`}
+                  onClick={(event) => {
+                    if (!item.href.startsWith('#')) return;
+                    event.preventDefault();
+                    navigateTo(`/${item.href}`);
+                  }}
+                >
+                  {item.label}
+                </a>
+              ))}
             </nav>
           </div>
           <div>
@@ -392,7 +671,19 @@ function Footer() {
 }
 
 function Home() {
+  const [path, setPath] = useState(() => window.location.pathname);
+  const careerMatch = path.match(/^\/careers\/([^/]+)\/?$/);
+  const selectedJob = careerMatch ? getJobBySlug(careerMatch[1]) : undefined;
+  const isCareerRoute = Boolean(careerMatch);
+
   useEffect(() => {
+    const onPopState = () => setPath(window.location.pathname);
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, []);
+
+  useEffect(() => {
+    if (isCareerRoute) return;
     document.title = 'Petrotek UAE at AKCAF Ponnonakazhcha 2026 | Industrial Reliability Solutions';
     const description = 'Meet Petrotek UAE at AKCAF Ponnonakazhcha 2026 in Dubai. Discover reliable solutions for industrial lubrication, compressed air and CNC manufacturing technology.';
     const setMeta = (attribute: string, key: string, content: string) => {
@@ -421,8 +712,19 @@ function Home() {
       });
     }, { threshold: .1 });
     document.querySelectorAll('[data-reveal]').forEach((element) => observer.observe(element));
+    if (window.location.hash) {
+      window.setTimeout(() => document.querySelector(window.location.hash)?.scrollIntoView(), 50);
+    }
     return () => observer.disconnect();
-  }, []);
+  }, [isCareerRoute, path]);
+
+  if (careerMatch && !selectedJob) {
+    return <NotFound />;
+  }
+
+  if (selectedJob) {
+    return <CareerDetail job={selectedJob} />;
+  }
 
   return (
     <div className="site-shell">
@@ -435,6 +737,7 @@ function Home() {
         <WhyPetrotek />
         <EventCulture />
         <EventDates />
+        <Careers />
         <FinalCta />
       </main>
       <Footer />
