@@ -510,7 +510,7 @@ function CareerDetail({ job }: { job: JobOpening }) {
         <section className="career-detail" aria-labelledby="career-detail-title">
           <div className="container career-detail-grid">
             <article className="career-detail-copy">
-              <a
+              {/* <a
                 className="career-back"
                 href="/#careers"
                 onClick={(event) => {
@@ -519,7 +519,7 @@ function CareerDetail({ job }: { job: JobOpening }) {
                 }}
               >
                 <ArrowDownRight size={15} /> Back to openings
-              </a>
+              </a> */}
               <div className="eyebrow">{job.division}</div>
               <h1 id="career-detail-title">{job.title}</h1>
               <p className="career-summary">{job.summary}</p>
