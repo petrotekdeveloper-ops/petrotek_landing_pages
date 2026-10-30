@@ -1,6 +1,8 @@
 [build]
 command = "pnpm run build"
 publish = "dist/public"
+# Skip the deploy when nothing in this folder changed (e.g. SteelFab-only commits).
+ignore = "[ \"$CACHED_COMMIT_REF\" != \"$COMMIT_REF\" ] && git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- ."
 
 [[redirects]]
 from = "/careers/*"
